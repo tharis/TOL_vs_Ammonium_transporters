@@ -73,10 +73,3 @@ A tree was then generated with 100 bootstraps
 
     raxml-ng --msa 02_parse.raxml.rba --model 'model' --all --bs-trees 100 --seed 1659012405 --prefix 03_bootstrap
 
-The model generated for the full length sequence was 'TMP1uf+G4'. This caused the tree to run very slowly with only one generated after 22hrs. For this reason the third model was chosen 'TIM2_G4'.
-
-
-
-
-
-This was then used to generate a tree using Raxml-ng.
