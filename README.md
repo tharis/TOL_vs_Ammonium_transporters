@@ -15,8 +15,6 @@ Then 11 files were generated containing the TM regions for each protein.
 
 The headers were adapted to reflect a uniprot header with the start and end point of each section.
 
-Above steps using bioservices.ipynb
-
 These protein sequences were then run through ncfp to convert the aa sequences to genomic DNA. 
 
     ncfp -v -s -l file.log file.fasta file.out email -d caches/new_ncfp -c ncfp_cache
@@ -40,13 +38,8 @@ The backthread was done using tcoffee
     t_coffee -other_pg seq_reformat -in nt-file -in2 alignment-file -action +thread_dna_on_prot_aln -output fasta > outfile 
 
 
-Then the nucleotide alignments were trimmed individually using trimal autotrim but before sequences with special characters were identified
+Then the nucleotide alignments were trimmed individually using trimal autotrim 
 
->tr|A0A562BXM4|A0A562BXM4_9GAMM Has S and Y in helix 4
->sp|P69680|AMTB_ECO57 Has R in helix 11
-
-which were manually deleted 
-  
     trimal -in file.fasta -out file.fasta -automated1
 
 Following this the regions were concatenated 
